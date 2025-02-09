@@ -21,7 +21,7 @@ func main() {
 	log.Println("All databases connected successfully!")
 
 	http.HandleFunc("/reservations/delete", routes.DeleteReservationHandler(databases))
-	log.Println("Server running on port 8082")
-	log.Println("http://localhost:8082/reservations/delete")
-	log.Fatal(http.ListenAndServe(":8082", nil))
+	log.Println("Server running on port 4002")
+	log.Println("http://localhost:4002/reservations/delete")
+	log.Fatal(http.ListenAndServe(":4002", nil))
 }
