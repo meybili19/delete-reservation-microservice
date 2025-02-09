@@ -28,7 +28,8 @@ func DeleteReservationHandler(databases map[string]*sql.DB) http.HandlerFunc {
 			return
 		}
 
-		if err := services.DeleteReservationService(databases["reservations"], id); err != nil {
+		err = services.DeleteReservationService(databases["reservations"], id)
+		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
