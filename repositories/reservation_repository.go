@@ -5,7 +5,6 @@ import (
 	"fmt"
 )
 
-// DeleteReservation elimina una reserva de la base de datos.
 func DeleteReservation(db *sql.DB, id int) error {
 	query := "DELETE FROM Reservations WHERE id = ?"
 	result, err := db.Exec(query, id)

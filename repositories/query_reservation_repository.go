@@ -10,7 +10,6 @@ import (
 	"github.com/meybili19/delete-reservation-microservice/config"
 )
 
-// ReservationQueryResponse representa la respuesta del microservicio GraphQL.
 type ReservationQueryResponse struct {
 	Data struct {
 		GetReservationById struct {
@@ -26,7 +25,6 @@ type ReservationQueryResponse struct {
 	} `json:"data"`
 }
 
-// GetReservationByID obtiene una reserva por ID desde el microservicio GraphQL.
 func GetReservationByID(id int) (*ReservationQueryResponse, error) {
 	url := config.GetQueryReservationURL()
 
