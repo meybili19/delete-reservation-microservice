@@ -63,3 +63,7 @@ func InitDatabases() (map[string]*sql.DB, error) {
 
 	return map[string]*sql.DB{"reservations": db}, nil
 }
+
+func GetParkingLotIncrementURL() string {
+	return os.Getenv("PARKINGLOT_SERVICE_INCREMENT_URL")
+}
